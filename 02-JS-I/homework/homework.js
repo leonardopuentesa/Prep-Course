@@ -54,6 +54,7 @@ function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
   return x/y;
+}
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
@@ -160,13 +161,9 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if(numero > 0){
-    return 'Es positivo'
-  }else if(numero<0){
-    return 'Es Negativo'
-  }else{
-    return false;
-  }
+  if (numero === 0) return false;
+  if (numero < 0) return 'Es negativo';
+  if (numero > 0) return 'Es positivo'
 }
 
 function agregarSimboloExclamacion(str) {
@@ -225,13 +222,10 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if(letra.length>2){
-    return 'Dato incorrecto'
-  } else if (letra===a || letra===e || letra===i || letra===o || letra===u){
+  if(letra.length>1) return 'Dato incorrecto';
+  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u'){
     return 'Es vocal'
-  } else {
-    return 'Dato incorrecto'
-  }
+  }else return 'Dato incorrecto';
 }
 
 
@@ -273,4 +267,4 @@ module.exports = {
   areaDelTriangulo,
   deEuroAdolar,
   esVocal,
-};
+}
